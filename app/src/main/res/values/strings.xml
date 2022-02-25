@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TicTacToe</string>
+    <string name="cell_content_description">Cell of TicTacToe</string>
 </resources>
