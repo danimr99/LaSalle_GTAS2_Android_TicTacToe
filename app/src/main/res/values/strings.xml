@@ -4,4 +4,9 @@
     <string name="notEmptyCellError">You must click on an empty cell.</string>
     <string name="turnPlayerX">Turn: Player X</string>
     <string name="turnPlayerO">Turn: Player O</string>
+    <string name="endGameDialog">Game Result</string>
+    <string name="playerXWins">Player X Wins</string>
+    <string name="playerOWins">Player O Wins</string>
+    <string name="draw">It\'s a draw</string>
+    <string name="playAgain">Play Again</string>
 </resources>

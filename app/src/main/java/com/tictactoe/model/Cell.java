@@ -19,6 +19,10 @@ public class Cell {
         return this.status == CellStatus.EMPTY_CELL;
     }
 
+    public CellStatus getStatus() {
+        return status;
+    }
+
     public void setStatus(CellStatus status) {
         this.status = status;
     }
