@@ -10,6 +10,9 @@
 
     <TextView
         android:id="@+id/textView"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="125dp" />
@@ -18,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="4"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/grid">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +30,6 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <!--images of the grid boxes-->
             <ImageView
                 android:id="@+id/imageView0"
                 android:layout_width="match_parent"
@@ -55,7 +58,6 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <!--images of the grid boxes-->
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
@@ -84,7 +86,6 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <!--images of the grid boxes-->
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
