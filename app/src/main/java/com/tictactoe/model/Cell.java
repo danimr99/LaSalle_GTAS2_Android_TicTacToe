@@ -1,6 +1,5 @@
 package com.tictactoe.model;
 
-import android.view.View;
 import android.widget.ImageView;
 
 public class Cell {
@@ -18,5 +17,9 @@ public class Cell {
 
     public boolean isEmptyCell() {
         return this.status == CellStatus.EMPTY_CELL;
+    }
+
+    public void setStatus(CellStatus status) {
+        this.status = status;
     }
 }

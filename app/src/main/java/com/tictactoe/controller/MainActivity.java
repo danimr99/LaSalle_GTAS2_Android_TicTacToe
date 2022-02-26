@@ -9,12 +9,16 @@ import android.widget.Toast;
 
 import com.tictactoe.R;
 import com.tictactoe.model.Cell;
+import com.tictactoe.model.CellStatus;
 import com.tictactoe.model.PlayerTurn;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private TextView playerTurnText;
     private PlayerTurn playerTurn;
-    private Cell[] cells;
+    private List<Cell> cells = new LinkedList<>();
     private Integer[] imageViewsIDs = {
             R.id.imageView0,
             R.id.imageView1,
@@ -41,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Get every ImageView as cell
         for(int i = 0; i < this.imageViewsIDs.length; i++) {
-            this.cells[i] = new Cell((ImageView) findViewById(this.imageViewsIDs[i]));
+            this.cells.add(new Cell((ImageView) findViewById(this.imageViewsIDs[i])));
         }
 
         // Make every cell clickable
@@ -52,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void clickCell(Cell cell) {
         if(cell.isEmptyCell()) {
-            this.setPlayerCell(cell.getWidget());
+            this.setPlayerCell(cell);
 
             this.changePlayerTurn();
         } else {
@@ -60,14 +64,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setPlayerCell(ImageView imageView) {
+    private void setPlayerCell(Cell cell) {
         switch (this.playerTurn) {
             case PLAYER_X: {
-                imageView.setBackgroundResource(R.drawable.x);
+                cell.getWidget().setBackgroundResource(R.drawable.x);
+                cell.setStatus(CellStatus.X_CELL);
                 break;
             }
             case PLAYER_O: {
-                imageView.setBackgroundResource(R.drawable.o);
+                cell.getWidget().setBackgroundResource(R.drawable.o);
+                cell.setStatus(CellStatus.O_CELL);
                 break;
             }
             default:

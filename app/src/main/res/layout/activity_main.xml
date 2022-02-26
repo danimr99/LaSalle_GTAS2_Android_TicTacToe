@@ -9,10 +9,10 @@
     tools:context=".controller.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_weight="1"
-        android:layout_height="125dp"
-        />
+        android:layout_height="125dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
